@@ -1,0 +1,79 @@
+### Get a AddressData by _id
+
+GET http://localhost:50000/addressdata/{{addressdata__id}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
+
+### Get all AddressData
+
+GET http://localhost:50000/addressdatas
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
+
+### Creates a new AddressData
+
+POST http://localhost:50000/addressdata
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "firstname": "String",
+  "lastname": "String",
+  "email": "String",
+  "phonenumber": "String",
+  "address": {
+    "housenumber": 10,
+    "street": "String",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    }
+  }
+}
+
+### Update an existing AddressData
+
+PUT http://localhost:50000/addressdata/{{addressdata__id}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+{
+  "firstname": "String",
+  "lastname": "String",
+  "email": "String",
+  "phonenumber": "String",
+  "address": {
+    "housenumber": 10,
+    "street": "String",
+    "location": {
+      "type": "Point",
+      "coordinates": [
+        0,
+        0
+      ]
+    }
+  }
+}
+
+### Delete an existing AddressData
+
+DELETE http://localhost:50000/addressdata/{{addressdata__id}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
+
+### Get all AddressData
+
+GET http://localhost:50000/addressdatas_1
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+

@@ -1,0 +1,17 @@
+### Ignore installed dependencies
+backend/node_modules
+backend/package-lock.json
+
+### Ignore environments
+backend/.env
+db/.env
+*.env.json
+
+### Ignore database files
+db/data/*
+db/key/*
+
+### Ignore IDE files
+backend/.idea
+.idea
+

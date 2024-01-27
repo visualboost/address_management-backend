@@ -6,6 +6,14 @@ Content-Type: application/json
 
 
 
+### Get all AddressData
+
+GET http://localhost:50000/addressdatas?sort={{getalladdressdata_sort}}&page={{getalladdressdata_page}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
+
 ### Creates a new AddressData
 
 POST http://localhost:50000/addressdata
@@ -30,6 +38,14 @@ Content-Type: application/json
   }
 }
 
+### Delete an existing AddressData
+
+DELETE http://localhost:50000/addressdata?firstname={{deleteByFirstname_firstname}}
+x-api-key: {{apiKey}}
+Content-Type: application/json
+
+
+
 ### Update an existing AddressData
 
 PUT http://localhost:50000/addressdata/{{addressdata__id}}
@@ -53,19 +69,3 @@ Content-Type: application/json
     }
   }
 }
-
-### Get all AddressData
-
-GET http://localhost:50000/addressdatas?sort={{getalladdressdata_sort}}&page={{getalladdressdata_page}}
-x-api-key: {{apiKey}}
-Content-Type: application/json
-
-
-
-### Delete an existing AddressData
-
-DELETE http://localhost:50000/addressdata/firstname=
-x-api-key: {{apiKey}}
-Content-Type: application/json
-
-

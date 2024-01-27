@@ -142,13 +142,16 @@ router.put("/addressdata/:_id", async (req, res, next) => {
 /**
  * Delete an existing AddressData
  **/
-router.delete("/addressdata/firstname=", async (req, res, next) => {
+router.delete("/addressdata", async (req, res, next) => {
     try {
         {
         }
 
         const id = req.params._id;
-        const addressdata = await AddressData.findOneAndDelete({}, { __v: 0 });
+        const addressdata = await AddressData.findOneAndDelete(
+            { firstname: req.query.firstname },
+            { __v: 0 },
+        );
 
         if (!addressdata) {
             return res.status(404).send("Not Found");
